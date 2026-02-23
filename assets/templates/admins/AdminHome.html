@@ -1,0 +1,72 @@
+{% extends 'admins/adminbase.html' %}
+{% load static %}
+
+{% block contents %}
+<div class="home" style="background: linear-gradient(135deg, #ffffff, #2a5298); min-height: auto; padding: 50px 0; display: flex; justify-content: center; align-items: center;">
+    <div class="home_slider_container" style="height: auto; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+
+        <!-- Home Content -->
+        <div class="home_slider_content">
+            <div class="container">
+                <div class="row">
+                    <div class="col text-center">
+                        <div class="home_slider_title" style="font-size: 36px; font-weight: bold; color: #333; margin-bottom: 20px;">
+                            Stress Detection System
+                        </div>
+                        <div class="home_slider_subtitle" style="font-size: 24px; color: #555; margin-bottom: 30px;">
+                            by Image Processing and Machine Learning
+                        </div>
+                        <div class="home_slider_form_container" style="margin-top: 30px;">
+                            <p style="color: black; font-size: 18px; line-height: 1.6; padding: 0 15px;">
+                                The main goal of our project is to detect stress in IT professionals using
+                                <b>advanced Machine Learning and Image Processing</b> techniques.
+                                <br><br>
+                                Unlike older systems, ours includes <b>live detection</b> and <b>personal counseling</b>.
+                                We analyze employees’ physical and mental stress levels periodically, ensuring
+                                a <b>healthy and productive work environment</b>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<style>
+    @media (max-width: 768px) {
+        .home_slider_title {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .home_slider_subtitle {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .home_slider_form_container p {
+            font-size: 16px;
+            padding: 0 10px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .home_slider_title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .home_slider_subtitle {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .home_slider_form_container p {
+            font-size: 14px;
+            padding: 0 5px;
+        }
+    }
+</style>
+{% endblock %}

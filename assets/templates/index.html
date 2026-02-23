@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contents %}
+
+<div class="home">
+    <div class="home_background">
+        <div class="home_content">
+            <div class="container">
+                <div class="row">
+                    <div class="col text-center">
+                        <h1 class="home_title">Stress Detection System</h1>
+                        <h2 class="home_subtitle">by Image Processing and Machine Learning</h2>
+                        <p class="home_text">
+                            The main goal of our project is to detect stress in IT professionals using
+                            <b>advanced Machine Learning and Image Processing</b> techniques.
+                            <br><br>
+                            Unlike older systems, ours includes <b>live detection</b> and <b>personal counseling</b>.
+                            We analyze employees’ physical and mental stress levels periodically, ensuring
+                            a <b>healthy and productive work environment</b>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Full-Page Gradient Background */
+    .home_background {
+        min-height: 100vh;
+        width: 100%;
+        background: linear-gradient(135deg, #ffffff, #2a5298);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .home_content {
+        max-width: 850px;
+        background: rgba(255, 255, 255, 0.8);
+        padding: 30px;
+        border-radius: 12px;
+        backdrop-filter: blur(8px);
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Typography */
+    .home_title {
+        font-size: 40px;
+        font-weight: bold;
+        color: #1e3c72;
+    }
+
+    .home_subtitle {
+        font-size: 22px;
+        margin-bottom: 20px;
+        font-weight: 500;
+        color: #2a5298;
+    }
+
+    .home_text {
+        font-size: 18px;
+        line-height: 1.6;
+        color: #333;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .home_title {
+            font-size: 32px;
+        }
+
+        .home_subtitle {
+            font-size: 18px;
+        }
+
+        .home_content {
+            padding: 20px;
+        }
+    }
+</style>
+
+{% endblock %}

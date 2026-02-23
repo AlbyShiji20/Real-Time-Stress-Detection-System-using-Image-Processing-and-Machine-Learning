@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contents %}
+
+<div class="admin-login">
+    <div class="admin_background">
+        <div class="admin_content">
+            <h1 class="admin_title">Admin Login Form</h1>
+            <form action="{% url 'AdminLoginCheck' %}" method="POST" class="login_form">
+                {% csrf_token %}
+                
+                <div class="form-group">
+                    <input type="text" class="form-control" name="loginid" required placeholder="Enter Login ID">
+                </div>
+
+                <div class="form-group">
+                    <input type="password" class="form-control" name="pswd" required placeholder="Enter Password">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Login</button>
+
+                {% if messages %}
+                    {% for message in messages %}
+                        <p class="message">{{ message }}</p>
+                    {% endfor %}
+                {% endif %}
+            </form>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Full-page Gradient Background */
+    .admin_background {
+        min-height: 100vh;
+        width: 100%;
+        background: linear-gradient(135deg, #ffffff, #2a5298);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .admin_content {
+        max-width: 400px;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 30px;
+        border-radius: 12px;
+        backdrop-filter: blur(8px);
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .admin_title {
+        font-size: 24px;
+        font-weight: bold;
+        color: #1e3c72;
+        margin-bottom: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .btn-primary {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        background-color: #2a5298;
+        border: none;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .btn-primary:hover {
+        background-color: #1e3c72;
+    }
+
+    .message {
+        color: green;
+        margin-top: 10px;
+    }
+</style>
+
+{% endblock %}

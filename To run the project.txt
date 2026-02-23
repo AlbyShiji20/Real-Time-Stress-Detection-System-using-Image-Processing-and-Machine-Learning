@@ -1,0 +1,7 @@
+To run the project
+
+open Command Prompt (CMD)
+
+step1: myenv\Scripts\activate
+
+step2:  python manage.py runserver

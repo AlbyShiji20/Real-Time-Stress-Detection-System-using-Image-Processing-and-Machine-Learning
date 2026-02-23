@@ -1,0 +1,33 @@
+{% extends 'users/userbase.html' %}
+{% load static %}
+
+{% block contents %}
+
+<div class="home" style="background: linear-gradient(to bottom, #ffffff, #4a90e2); height: auto;">
+    <div class="home_slider_container">
+
+        <!-- Home Slider Content -->
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <div class="home_slider_title" style="font-size: 36px; font-weight: bold; color: white;">
+                        Stress Detection in IT Professionals
+                    </div>
+                    <div class="home_slider_subtitle" style="font-size: 22px; color: white; margin-top: 15px;">
+                        by Image Processing and Machine Learning
+                    </div>
+                    <div class="home_slider_form_container" style="margin-top: 20px;">
+                        <p>
+                            <font color="white" style="font-size: 18px;">
+                                Detecting By Keras model <a href="{% url 'UserKerasModel' %}" style="color: #4CAF50; font-weight: bold;">Live</a> Now
+                            </font>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

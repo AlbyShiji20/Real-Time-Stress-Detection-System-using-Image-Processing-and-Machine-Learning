@@ -1,0 +1,42 @@
+{% extends 'users/userbase.html' %}
+{% load static %}
+
+{% block contents %}
+
+<div class="home">
+    <div class="home_slider_container" 
+         style="background: linear-gradient(to bottom, #ffffff, #4a90e2); 
+                padding: 40px 0; 
+                display: flex; 
+                align-items: center; 
+                justify-content: center; 
+                height: auto; 
+                min-height: 100vh;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="home_slider_title" 
+                        style="font-size: 26px; font-weight: bold; margin-bottom: 10px;">
+                        Stress Detection System
+                    </h2>
+                    <h5 class="home_slider_subtitle" 
+                        style="font-size: 18px; margin-bottom: 15px;">
+                        by Image Processing and Machine Learning
+                    </h5>
+                    <div class="home_slider_form_container">
+                        <p style="color: black; font-size: 16px; line-height: 1.5; 
+                                  text-align: center; padding: 10px 20px;">
+                            The main motive of our project is to detect stress in IT professionals using advanced Machine Learning and Image Processing techniques. 
+                            Our system improves upon traditional stress detection methods by incorporating <strong>live detection</strong> and <strong>personal counseling</strong>. 
+
+                            Unlike older systems, this version periodically analyzes employees' mental and physical stress levels and provides tailored remedies. 
+                            It also includes survey forms for stress management, ensuring a <strong>healthier and more productive workplace</strong>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

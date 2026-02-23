@@ -1,0 +1,63 @@
+{% extends 'users/userbase.html' %}
+{% load static %}
+
+{% block contents %}
+<div class="features" style="background: linear-gradient(135deg, #ffffff, #2a5298);">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="section_title_container text-center">
+                    <section id="remedies-section">
+                        <h2 style="color: black;">Recommended Remedies</h2>
+                        <p style="color: black;">Select an emotion to view recommended remedies.</p>
+                        <select id="emotion-selector" onchange="displayRemedies()" style="color: black;">
+                            <option value="">--Select Emotion--</option>
+                            <option value="stress">Stress</option>
+                            <option value="anxiety">Anxiety</option>
+                            <option value="sadness">Sadness</option>
+                            <option value="anger">Anger</option>
+                            <option value="disgust">Disgust</option>
+                            <option value="fear">Fear</option>
+                            <option value="happy">Happy</option>
+                            <option value="surprise">Surprise</option>
+                            <option value="neutral">Neutral</option>
+                        </select>
+                        <div id="remedies-container" style="margin-top: 20px; color: black;"></div>
+                    </section>
+                    <script>
+                        const remedies = {
+                            stress: ["Practice deep breathing", "Exercise regularly", "Meditate daily", "Listen to relaxing music"],
+                            anxiety: ["Try mindfulness techniques", "Engage in physical activity", "Limit caffeine intake", "Connect with loved ones"],
+                            sadness: ["Spend time in nature", "Talk to a friend or therapist", "Practice gratitude", "Engage in hobbies you enjoy"],
+                            anger: ["Practice deep breathing", "Engage in a physical activity", "Write down your thoughts", "Use relaxation techniques"],
+                            disgust: ["Practice deep breathing", "Ground yourself", "Take a walk", "Engage in a relaxing activity", "Talk to someone", "Use aromatherapy", "Visualize something pleasant", "Practice mindfulness or meditation"],
+                            fear: ["Practice deep breathing", "Engage in grounding techniques", "Visualize a peaceful scenario", "Use progressive muscle relaxation", "Meditate or practice mindfulness", "Talk to someone you trust", "Engage in physical activity", "Repeat affirmations", "Challenge your fearful thoughts"],
+                            happy: ["Practice gratitude and appreciation", "Share your happiness with others", "Engage in enjoyable activities", "Spend time outdoors or in nature", "Meditate or practice mindfulness", "Reflect on what makes you happy"],
+                            surprise: ["Take a moment to process the situation", "Focus on your breathing", "Talk about the surprise", "Engage in a calming activity", "Reflect on the situation", "Practice mindfulness"],
+                            neutral: ["Engage in mindfulness", "Practice meditation or deep breathing", "Take a short walk or light physical activity", "Engage in fulfilling activities", "Journal your thoughts", "Connect with someone", "Try something new"]
+                        };
+                        
+                        function displayRemedies() {
+                            const emotion = document.getElementById("emotion-selector").value;
+                            const container = document.getElementById("remedies-container");
+                            container.innerHTML = ""; // Clear previous content
+
+                            if (emotion && remedies[emotion]) {
+                                const list = document.createElement("ul");
+                                list.style.color = "black"; // Ensure text is black
+                                remedies[emotion].forEach(remedy => {
+                                    const listItem = document.createElement("li");
+                                    listItem.textContent = remedy;
+                                    listItem.style.color = "black"; // Explicitly set to black
+                                    list.appendChild(listItem);
+                                });
+                                container.appendChild(list);
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>       
+    </div>            
+</div>
+{% endblock %}
